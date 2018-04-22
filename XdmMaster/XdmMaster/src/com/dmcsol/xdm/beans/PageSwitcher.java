@@ -17,4 +17,18 @@ public class PageSwitcher implements Serializable {
     public void setDynamicTaskFlowId(String taskFlowId) {
         this.taskFlowId = taskFlowId;
     }
+    
+    public String getOverview(){
+        taskFlowId = "/WEB-INF/task-overview-edit-flow.xml#task-overview-edit-flow";
+        
+        return null;
+    }
+    
+    public String getTimeline(){
+        taskFlowId = "/WEB-INF/person-timeline-flow.xml#person-timeline-flow";
+        
+        return null;
+    }
+    
+    
 }

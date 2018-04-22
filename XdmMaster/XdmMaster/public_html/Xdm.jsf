@@ -10,15 +10,17 @@
                             <af:gridCell marginStart="5px" width="50%" id="gc1">
                                 <af:menuBar id="mb1">
                                     <af:menu text="Tasks" id="m1">
-                                        <af:commandMenuItem text="Overview/Edit" id="cmi2"/>
-                                        <af:commandMenuItem text="Timeline" id="cmi1"/>
+                                        <af:commandMenuItem text="Overview/Edit" id="cmi2"
+                                                            action="#{viewScope.PageSwitcherBean.getOverview}"/>
+                                        <af:commandMenuItem text="Timeline" id="cmi1"
+                                                            action="#{viewScope.PageSwitcherBean.getTimeline}"/>
                                     </af:menu>
                                 </af:menuBar>
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2"/>
                         </af:gridRow>
                     </af:panelGridLayout>
-                    <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"/>
+                    <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" partialTriggers="::cmi2 ::cmi1"/>
                 </f:facet>
                 <f:attribute name="PageTitle" value="Next Generation Destination Management"/>
             </af:pageTemplate>
