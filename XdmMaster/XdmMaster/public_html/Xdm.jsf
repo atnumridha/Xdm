@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="xdmmasterBundle" value="#{adfBundle['com.dmcsol.xdm.XdmMasterBundle']}"/>
     <af:document title="Xdm.jsf" id="d1">
         <af:form id="f1">
             <af:pageTemplate viewId="/WEB-INF/XdmPageTemplate.jsf" id="pt1">
@@ -9,10 +11,10 @@
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
                             <af:gridCell marginStart="5px" width="50%" id="gc1">
                                 <af:menuBar id="mb1">
-                                    <af:menu text="Tasks" id="m1">
-                                        <af:commandMenuItem text="Overview/Edit" id="cmi2"
+                                    <af:menu text="#{xdmmasterBundle.TASKS_MENU_HEADER}" id="m1">
+                                        <af:commandMenuItem text="#{xdmmasterBundle.OVERVIEW_EDIT_LABEL}" id="cmi2"
                                                             action="#{viewScope.PageSwitcherBean.getOverview}"/>
-                                        <af:commandMenuItem text="Timeline" id="cmi1"
+                                        <af:commandMenuItem text="#{xdmmasterBundle.TIMELINE_LABEL}" id="cmi1"
                                                             action="#{viewScope.PageSwitcherBean.getTimeline}"/>
                                     </af:menu>
                                 </af:menuBar>
@@ -22,7 +24,7 @@
                     </af:panelGridLayout>
                     <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" partialTriggers="::cmi2 ::cmi1"/>
                 </f:facet>
-                <f:attribute name="PageTitle" value="Next Generation Destination Management"/>
+                <f:attribute name="PageTitle" value="#{xdmmasterBundle.HEADER_TITLE}"/>
             </af:pageTemplate>
         </af:form>
     </af:document>
