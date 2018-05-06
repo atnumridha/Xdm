@@ -30,4 +30,7 @@
    <list n="listOfChildren">
       <hash><url n="URL" path="XdmMaster/XdmMaster.jpr"/></hash>
    </list>
+   <hash n="ResourceBundleOptions">
+      <list n="RegisteredResourceBundles"/>
+   </hash>
 </jws:workspace>

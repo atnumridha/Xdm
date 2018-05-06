@@ -18,4 +18,10 @@
     <CredentialStoreContext credentialStoreClass="oracle.adf.share.security.providers.jps.CSFCredentialStore"
                             credentialStoreLocation="../../src/META-INF/jps-config.xml"/>
   </sec:adf-security-child>
+  <adf-resourcebundle-config xmlns="http://xmlns.oracle.com/adf/resourcebundle/config">
+    <applicationBundleName>resourcebundles/xliffBundles/XdmMasterOverrideBundle</applicationBundleName>
+    <bundleList>
+      <bundleId override="true">com.dmcsol.xdm.XdmMasterBundle</bundleId>
+    </bundleList>
+  </adf-resourcebundle-config>
 </adf-config>
