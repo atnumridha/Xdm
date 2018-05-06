@@ -94,8 +94,8 @@
       <value n="webIANAEncoding" v="UTF-8"/>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="XdmMaster-XdmMaster-webapp"/>
-      <value n="j2eeWebContextRoot" v="XdmMaster-XdmMaster-context-root"/>
+      <value n="j2eeWebAppName" v="Xdm"/>
+      <value n="j2eeWebContextRoot" v="Xdm"/>
    </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
       <hash n="javaContentSet">
@@ -211,6 +211,7 @@
                   <url path="../../../../XdmLibs/adflibXdmCommonView.jar" jar-entry=""/>
                   <url path="../../../../XdmLibs/adflibXdmSched.jar" jar-entry=""/>
                   <url path="../../../../XdmLibs/adflibXdmTaskMgr.jar" jar-entry=""/>
+                  <url path="../../../../XdmLibs/adflibXdmCommonSkin.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="ADF Library"/>
